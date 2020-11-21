@@ -4590,12 +4590,6 @@ header,
 
 
 
-.slider-home-three .content {
-
-    /*padding-bottom: 90px;*/
-
-}
-
 
 
 .slider-home-four .content {
@@ -4777,7 +4771,9 @@ header,
 
 }
 
-
+.btn .caret {
+    margin-top: 200%;
+}
 
 .static-banner-home-two .banner-contact-form h3,
 
@@ -4787,17 +4783,21 @@ header,
 
     font-family: 'Poppins';
 
+    margin-bottom: 2%;
+
 }
 
 
-
+@media (max-width: 1099px)
 .static-banner-home-two .banner-contact-form h3 {
 
     color: #000000;
 
-    font-size: 21px;
+    font-size: 17px;
 
     font-weight: 600;
+
+    margin-bottom: 6%;
 
 }
 
@@ -8638,7 +8638,7 @@ body.page-template-home > div.row.m0{
 
 footer.row {
 
-    background: #161616;
+    background: white;
 
     margin-top: 45px;
 
@@ -17930,7 +17930,7 @@ footer.row .footer_bottom .right {
 
     height: 3px;
 
-    background: #e1ba60;
+    background: #99F100;
 
     margin-top: 20px;
 
@@ -21597,6 +21597,7 @@ footer.row .footer_bottom .right {
     .maintenance .maintenance_left .features_inner {
 
         margin: 0 auto;
+        padding-top: 3%;
 
     }
 
