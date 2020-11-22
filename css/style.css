@@ -128,8 +128,14 @@
 
     }
 
-}
+   
 
+}
+@media (min-width: 995px) {
+    .testimonials-area .wpcf7 {
+        padding: 0px 108px;
+    }
+}
 
 
 .mb0.row {
@@ -192,7 +198,7 @@ footer.row {
 
 .sectpad {
 
-    padding: 85px 0;
+    padding: 40px 0;
 
 }
 
@@ -630,7 +636,9 @@ header,
 
 }
 
-
+.header_top .contact_info .c_info.location:before {
+    font-size: 35px !important;
+}
 
 .header_top .contact_info .c_info:before {
 
@@ -667,8 +675,8 @@ header,
 
 
 .header_top .contact_info .c_info.location:before {
-
-    content: '\e6ab';
+    font-family: FontAwesome;
+    content: '\f232';
 
 }
 
@@ -676,16 +684,16 @@ header,
 
 .header_top .contact_info .c_info.tel_email:before {
 
-    content: '\e674';
+    font-family: FontAwesome;
+   content: "\f003";
 
 }
 
 
 
 .header_top .contact_info .c_info.service_time:before {
-
-    content: '\e668';
-
+    font-family: FontAwesome;
+    content: "\f10b";
 }
 
 
@@ -5267,23 +5275,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .testimonials-area input[type="submit"]{
 
-    background: #e1ba60;
+    background: #57C7E4;
 
     border: none;
 
     text-shadow: none;
 
-    color: #222;
-
-    font-weight: bold;
-
-    font-family: "Open Sans", sans-serif;
-
-    padding: 9px 40px;
-
-    line-height: 26px;
-
-    font-size: 14px;
+    display: block;
+    float: right;
+    border-radius: 4px;
+    color: #fff;
+    font: 500 15px/45px "Poppins", sans-serif;
+    padding: 0 30px;
+    text-transform: none;
+    transition: all .4s ease;
 
     margin-top: -5px;
 
@@ -7168,22 +7173,21 @@ footer .widget_inner .icon-Timer {
 .static-banner-home-two .banner-contact-form input[type=submit] {
 
     background: #57C7E4;
-
-    color: #FFFFFF;
-
-    font-family: 'Poppins';
-
-    font-size: 16px;
-
+    display: block;
+    float: right;
+    border-radius: 4px;
+    color: #fff;
+    font: 500 15px/45px "Poppins", sans-serif;
+    padding: 0 30px;
+    text-transform: none;
+    transition: all .4s ease;
     width: 100%;
 
     text-align: center;
 
     height: 47px;
 
-    line-height: 47px;
-
-    transition: all .4s ease;
+   
 
     border: none;
 
@@ -8752,14 +8756,36 @@ footer.row .footer_sidebar .widget .widget_title {
 
     font: normal 500 20px/26px "Poppins", sans-serif;
 
-    color: #FFFFFF;
+    color: black;
 
     margin: 0;
 
     text-transform: capitalize;
 
 }
-
+.up {
+    color: #3e5baa;
+    font-weight: 600;
+    font-size: 50px;
+}
+.header-bottom .rectex {
+    padding-bottom: 20px;
+    font-family: 'roboto',sans-serif;
+}
+.header-bottom .rectex .rec_min {
+    text-align: center;
+    /* padding: 10px; */
+}
+.header-bottom .rec_min {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    -webkit-transform: (1,1);
+    -ms-transform: scale(1,1);
+    transform: scale(1,1);
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
 
 
 footer.row .footer_sidebar .widget .widget_title:after {
@@ -8778,11 +8804,12 @@ footer.row .footer_sidebar .widget .widget_title:after {
 
     height: 2px;
 
-    background: #d7b361;
+    background: #99F100;
 
 }
-
-
+footer.row .footer_sidebar .widget.widget_links ul li a:hover, footer.row .footer_sidebar .widget.widget_links ul li a:focus {
+    color: black;
+}
 
 footer.row .footer_sidebar .widget ul {
 
@@ -8890,7 +8917,7 @@ footer.row .footer_sidebar .widget.about_us_widget .social_icon ul li a {
 
     font-size: 18px;
 
-    color: rgba(215, 179, 97, 0.5);
+    color: #1689FC;
 
     text-align: center;
 
@@ -8898,7 +8925,7 @@ footer.row .footer_sidebar .widget.about_us_widget .social_icon ul li a {
 
     height: 40px;
 
-    border: 1px solid rgba(215, 179, 97, 0.5);
+    border: 1px solid #1689FC;
 
     border-radius: 100%;
 
@@ -17293,8 +17320,29 @@ footer.row .footer_bottom .right {
     margin-left: 20px;
 
 }
+.our-services a.banner-btn.style-two {
+    margin-left: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #57c7e4;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 26px;
+    transition: all .4s ease;
+}
+.our-services p {
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
 
-.maintenance  .title h3:after {
+.our-services h2 {
+    margin-top: 0 !important;
+}
+.maintenance  .title h2:after {
 
     content: '';
 
@@ -17311,7 +17359,7 @@ footer.row .footer_bottom .right {
     margin-left: 20px;
 
 }
-.maintenance .title h3 {
+.maintenance .title h2 {
 
     margin: 0;
 
@@ -17972,7 +18020,9 @@ footer.row .footer_bottom .right {
 
 }
 
-
+.testimonials-count{
+    display: block;
+}
 
 @media (max-width: 991px) {
 
@@ -17981,9 +18031,11 @@ footer.row .footer_bottom .right {
         margin-bottom: 85px;
 
     }
+    .testimonials-area .wpcf7 {
+        padding : 0 50px;
+    }
 
 }
-
 
 
 .testimonials-area .testimonials .testimonial {
@@ -18342,7 +18394,7 @@ footer.row .footer_bottom .right {
 
     font: 130px/35px "Arial";
 
-    color: #e1ba60;
+    color: #7cc103;
 
     padding-top: 50px;
 
@@ -21665,7 +21717,7 @@ footer.row .footer_bottom .right {
 
     .maintenance .maintenance_left .features_inner .feature .media-left img {
 
-        max-width: 40px;
+        max-width: 33px;
 
     }
 
