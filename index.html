@@ -175,7 +175,7 @@ var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"http:\
                     <div role="form" class="wpcf7" id="wpcf7-f540-p535-o1" lang="en-US" dir="ltr">
                         <div class="screen-reader-response">
                         </div>
-                        <form action="/demosd/handylexo1/#wpcf7-f540-p535-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                        <form action="apisendmail.php" method="post" class="wpcf7-form" novalidate="novalidate">
                             <div style="display: none;">
                                 <input type="hidden" name="_wpcf7" value="540">
                                 <input type="hidden" name="_wpcf7_version" value="5.0.2">
@@ -205,7 +205,7 @@ var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"http:\
                                             <span class="wpcf7-form-control-wrap your-address">
                                                 <div class="btn-group bootstrap-select wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control">
                                                     <div class="dropdown-menu open" style="    min-height: 0;">
-                                                        <ul class="dropdown-menu inner" role="menu">
+                                                       <!--  <ul class="dropdown-menu inner" role="menu">
                                                             <li data-original-index="0" class="selected">
                                                                 <a tabindex="0" class="" style="" data-tokens="null">
                                                                     <span class="text">-- Ville --</span>
@@ -332,9 +332,9 @@ var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"http:\
                                                                     <span class="glyphicon glyphicon-ok check-mark"></span>
                                                                 </a>
                                                             </li>
-                                                        </ul>
+                                                        </ul> -->
                                                     </div>
-                                                    <select name="menu-232" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required selectpicker form-control" aria-required="true" aria-invalid="false" tabindex="-98">
+                                                    <select name="ville" class="wpc selectpicker form-control" aria-required="true" aria-invalid="false" tabindex="-98">
                                                         <option disabled selected>-- Ville --</option>
                                                         <option value="Casablanca">Casablanca</option>
                                                         <option value="Marrakech">Marrakech</option>
@@ -363,27 +363,27 @@ var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"http:\
                                         <div class="col-md-6">
                                             <div class="form-grp">
                                                 <span class="wpcf7-form-control-wrap your-date">
-                                                    <input type="date" name="your-date" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-required wpcf7-validates-as-date" aria-required="true" aria-invalid="false">
+                                                    <input type="date" name="your-date" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-required="true" aria-invalid="false">
                                                 </span>
                                                 
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                            <div class="form-grp"><span class="wpcf7-form-control-wrap your-time">
-                                                <input type="text" name="your-time" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="hh:mm">
+                                                <input type="text" name="your-time" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-required="true" aria-invalid="false" placeholder="hh:mm">
                                                 
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <span class="wpcf7-form-control-wrap menu-232">
-                                                <select name="menu-232" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required selectpicker form-control" aria-required="true" aria-invalid="false" tabindex="-98">
-                                                    <option value="Mustard">Bricolage</option>
-                                                    <option value="Ketchup">Climatisation (chauffage, ventilation...)</option>
-                                                    <option value="Relish">Electricité</option>
-                                                    <option value="Relish">Plomberie</option>
-                                                    <option value="Ketchup">Revêtement (peinture, carrelage, papier-peint...)</option>
-                                                    <option value="Relish">Serrurerie</option>
-                                                    <option value="Relish">Autre</option>
+                                                <select name="service" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required selectpicker form-control" aria-required="true" aria-invalid="false" tabindex="-98">
+                                                    <option value="Bricolage">Bricolage</option>
+                                                    <option value="Climatisation">Climatisation (chauffage, ventilation...)</option>
+                                                    <option value="Electricité">Electricité</option>
+                                                    <option value="Plomberie">Plomberie</option>
+                                                    <option value="Revêtement">Revêtement (peinture, carrelage, papier-peint...)</option>
+                                                    <option value="Serrurerie">Serrurerie</option>
+                                                    <option value="Autre">Autre</option>
                                                 </select>
                                             </span>
                                             <input type="submit" value="Déposer votre demande" class="wpcf7-form-control wpcf7-submit">
@@ -953,7 +953,7 @@ var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"http:\
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <select name="menu-232" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required selectpicker form-control" aria-required="true" aria-invalid="false" tabindex="-98">
+                                                <select name="ville" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required selectpicker form-control" aria-required="true" aria-invalid="false" tabindex="-98">
                                                     <option disabled selected>-- Ville --</option>
                                                     <option value="Casablanca">Casablanca</option>
                                                     <option value="Marrakech">Marrakech</option>
@@ -1141,7 +1141,7 @@ var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"http:\
     var wpcf7 = {"apiSettings":{"root":"http:\/\/shtheme.net\/demosd\/handylexo1\/index.php?rest_route=\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
     /* ]]> */
     </script>
-    <script src="http://shtheme.net/demosd/handylexo1/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.2"></script>
+    <!-- <script src="http://shtheme.net/demosd/handylexo1/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.2"></script> -->
     <script src="//shtheme.net/demosd/handylexo1/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70"></script>
     <script>
     /* <![CDATA[ */
