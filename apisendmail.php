@@ -24,17 +24,17 @@ $Subject='Nouvelle inscription via le site Web';
 $TelClientFormatted=str_replace("06","2126",$TelClient);
 
 
-     $my_apikey = "9Q8P09AF8MR9YATFY3HK"; 
-                $destination =$TelClientFormatted; 
-                $message = "Bonjour ".$NomClient.", Saweblia vous remercie pour votre demande. Conformément aux restrictions sanitaires, les réparations urgentes sont prioritaires. Aussi, les délais d'intervention peuvent être ralentis par la disponibilité de nos équipes."; 
-                $api_url = "http://panel.apiwha.com/send_message.php"; 
-                $api_url .= "?apikey=". urlencode ($my_apikey); 
-                $api_url .= "&number=". urlencode ($destination); 
-                $api_url .= "&text=". urlencode ($message); 
-                $my_result_object = json_decode(file_get_contents($api_url, false)); 
+    //  $my_apikey = "9Q8P09AF8MR9YATFY3HK"; 
+    //             $destination =$TelClientFormatted; 
+    //             $message = "Bonjour ".$NomClient.", Saweblia vous remercie pour votre demande. Conformément aux restrictions sanitaires, les réparations urgentes sont prioritaires. Aussi, les délais d'intervention peuvent être ralentis par la disponibilité de nos équipes."; 
+    //             $api_url = "http://panel.apiwha.com/send_message.php"; 
+    //             $api_url .= "?apikey=". urlencode ($my_apikey); 
+    //             $api_url .= "&number=". urlencode ($destination); 
+    //             $api_url .= "&text=". urlencode ($message); 
+    //             $my_result_object = json_decode(file_get_contents($api_url, false)); 
 
-                var_dump($my_result_object);
-
+    //             var_dump($my_result_object);
+              
  // $my_apikey = "9Q8P09AF8MR9YATFY3HK"; 
  //                $destination =$TelClientFormatted; 
  //                $message = "Bonjour ".$NomClient.", Saweblia vous remercie pour votre demande. En quoi puis-je vous aider ?"; 
@@ -43,11 +43,11 @@ $TelClientFormatted=str_replace("06","2126",$TelClient);
  //                $api_url .= "&number=". urlencode ($destination); 
  //                $api_url .= "&text=". urlencode ($message); 
  //                $my_result_object = json_decode(file_get_contents($api_url, false)); 
-/* 
+ 
 $url = 'https://api.sendgrid.com/';
 $user = 'azure_7f5b2a5cb6cfae8c1feda8d742c3f914@azure.com';
 $pass = 'p@r@d0xait1980';
-$template_id = 'ab90db9c-3993-4e38-be96-316672afcc4a';
+$template_id = '0b70faa0-b132-4f73-912b-2c8aa1b2b186';
 
 $js = array(
   'sub' => array('-NomClient-' => array(strtoupper($NomClient)), 
@@ -64,7 +64,7 @@ $js = array(
 $params = array(
     'api_user'  => $user,
     'api_key'   => $pass,
-    'to'        => 'saweblia@saweblia.ma',
+    'to'        => 'hanane.gounane@gmail.com',
     'subject'   => $Subject,
     'html'      => 'e teste',
     'text'      => 'testing body',
@@ -85,11 +85,11 @@ curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
 curl_setopt($session, CURLOPT_HEADER, false);
 // Tell PHP not to use SSLv3 (instead opting for TLS)
 curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
-curl_setopt($session, CURLOPT_RETURNTRANSFER, true); */
+curl_setopt($session, CURLOPT_RETURNTRANSFER, true); 
  
 // obtain response
-// $response = curl_exec($session);
-//Scurl_close($session); 
+ $response = curl_exec($session);
+Scurl_close($session); 
   $query = "INSERT INTO WebsiteUser(user_name, user_tel,user_email, user_quartier, user_service, user_description) 
   values('$NomClient', '$TelClient','$Email', '$Quartier', '$Service', '$Code')";
   
