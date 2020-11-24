@@ -136,7 +136,21 @@
         padding: 0px 108px;
     }
 }
-
+#submit {
+    margin-left: 16%;
+    margin-top: 5%;
+    vertical-align: middle;
+    background: #57c7e4;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 10px;
+    transition: all .4s ease;
+    width: auto !important;
+    height: auto !important;
+}
 
 .mb0.row {
 

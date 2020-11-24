@@ -1,6 +1,6 @@
 <?php 
 
-$timezone  = +1;
+ { $timezone  = +1;
 $DateJour = gmdate("Y-m-d H:i:s", time() +3600*($timezone+date("I")));
 
 extract($_POST);
@@ -11,14 +11,14 @@ $connection->set_charset("utf8");
 //$mysqli->query('SET NAMES utf8');
 //mysql_query("SET NAMES 'utf8'");
 
-$NomClient = $_POST['your-name'];
-$TelClient = $_POST['your-phone'];
-$Email = $_POST['your-email'];
-$Code = "COVID19 Formulaire popup - Email : ".$_POST['your-email']."test";
-$Quartier_mail =htmlentities($_POST['ville'], ENT_COMPAT, 'UTF-8', true); //Quartier
-$Service_mail=htmlentities($_POST['service'],ENT_COMPAT, 'UTF-8', true); //service
-$Quartier = $_POST['ville'];
-$Service = $_POST['service'];
+$NomClient = $_POST['fname'];
+$TelClient = $_POST['phone'];
+$Email = $_POST['email'];
+$Code = "COVID19 Formulaire popup - Email : ".$_POST['email']."test";
+$Quartier_mail =htmlentities($_POST['Quartier'], ENT_COMPAT, 'UTF-8', true); //Quartier
+$Service_mail=htmlentities($_POST['Service'],ENT_COMPAT, 'UTF-8', true); //service
+$Quartier = $_POST['Quartier'];
+$Service = $_POST['Service'];
 
 $Subject='Nouvelle inscription via le site Web';        
 
@@ -69,27 +69,127 @@ $Subject='Nouvelle inscription via le site Web';
   } else {
     echo $response;
           }
-        }
-
-// Generate curl request
-$session = curl_init($request);
-// Tell curl to use HTTP POST
-curl_setopt ($session, CURLOPT_POST, true);
-// Tell curl that this is the body of the POST
-curl_setopt ($session, CURLOPT_POSTFIELDS, $params);
-// Tell curl not to return headers, but do return the response
-curl_setopt($session, CURLOPT_HEADER, false);
-// Tell PHP not to use SSLv3 (instead opting for TLS)
-curl_setopt($session, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
-curl_setopt($session, CURLOPT_RETURNTRANSFER, true); 
+       
  
-// obtain response
- $response = curl_exec($session);
-Scurl_close($session); 
-  $query = "INSERT INTO WebsiteUser(user_name, user_tel,user_email, user_quartier, user_service, user_description) 
-  values('$NomClient', '$TelClient','$Email', '$Quartier', '$Service', '$Code')";
-  
-  $query_result = $connection->query($query);
+
+/// 
+/// add client to hubspot
+///
+    $fname=$_POST['fname'];
+    $lname="";
+	$phone=$_POST['phone'];
+	$email=$_POST['email'];
+	$Quartier=$_POST['Quartier'];
+	$Service=$_POST['Service'];
 
 
+
+	$contact_data = array(
+		"fname" => $fname.' '.$Service,
+		"lname" => $lname,
+		"email" => $email,
+		"phone" => $phone,
+		"info" => "",
+		"code" => "",
+		"city" => "",
+		"radio1" => "",
+		"address" => $Quartier,
+		"totalsession" =>"",
+    "company" => "",
+	);
+	
+	$ans_hubspot = new ans_hubspot();
+	$ans_hubspot->contact_create($contact_data);
+	//$ans_hubspot->list_create("Recovery Lead Generation");
+	$ans_hubspot->list_assign_contact("2", $contact_data["phone"]);
+    
+
+
+
+
+  }
+}
+ class ans_hubspot{
+	private $hapikey = "73c28615-ef80-46a8-be75-98f0d01d8ad1";
+
+	function list_assign_contact($lid, $phone){
+		(object)$arr = array(
+			"phone" => array($phone)
+		);
+        $post_json = json_encode($arr);
+        $endpoint = 'https://api.hubapi.com/contacts/v1/lists/'.$lid.'/add?hapikey=' . $this->hapikey;
+        $this->http($endpoint,$post_json);
+        var_dump($endpoint);
+	}	
+	
+	
+	function list_create($list_name){
+		$arr = array(
+		    "name" => $list_name,
+		    "dynamic" => false,
+		    "filters" => array(
+		    	array(
+		    		(object)array(
+						"operator" => "EQ",
+						"value" => "@hubspot",
+						"property" => "twitterhandle",
+						"type" => "string"
+					)
+            	)  
+		    )
+		);
+        $post_json = json_encode($arr);
+        $endpoint = 'https://api.hubapi.com/contacts/v1/lists?hapikey=' . $this->hapikey;
+		$this->http($endpoint,$post_json);
+	}
+
+	function contact_create($contact_data){
+        $arr = array(
+            'properties' => array(
+                array(
+                    'property' => 'email',
+                    'value' => $contact_data["email"]
+                ),
+                array(
+                    'property' => 'firstname',
+                    'value' => $contact_data["fname"]
+                ),
+                array(
+                    'property' => 'lastname',
+                    'value' => ""
+                ),
+                array(
+                    'property' => 'phone',
+                    'value' => $contact_data["phone"]
+                ),
+                array(
+                  'property' => 'address',
+                  'value' => $contact_data["address"]
+              )
+            )
+        );
+        $post_json = json_encode($arr);
+        $endpoint = 'https://api.hubapi.com/contacts/v1/contact?hapikey=' . $this->hapikey;
+        $this->http($endpoint,$post_json);
+        
+	}
+	
+	function http($endpoint,$post_json){
+
+        $ch = @curl_init();
+        @curl_setopt($ch, CURLOPT_POST, true);
+        @curl_setopt($ch, CURLOPT_POSTFIELDS, $post_json);
+        @curl_setopt($ch, CURLOPT_URL, $endpoint);
+        @curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+        @curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = @curl_exec($ch);
+        $status_code = @curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $curl_errors = curl_error($ch);
+        @curl_close($ch);
+        echo "curl Errors: " . $curl_errors;
+        echo "\nStatus code: " . $status_code;
+        echo "\nResponse: " . $response;
+       return $response;
+  }
+ }
  ?>
