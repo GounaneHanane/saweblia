@@ -7941,7 +7941,9 @@ body.page-template-home > div.row.m0{
 
 .static-banner-home-two .banner-contact-form input,
 
-.static-banner-home-two .banner-contact-form textarea {
+.static-banner-home-two .banner-contact-form textarea,
+
+.static-banner-home-two .banner-contact-form select{
 
     width: 100%;
 
