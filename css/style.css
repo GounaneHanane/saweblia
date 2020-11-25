@@ -137,8 +137,7 @@
     }
 }
 #submit {
-    margin-left: 16%;
-    margin-top: 5%;
+    margin: 2% auto;
     vertical-align: middle;
     background: #57c7e4;
     font-family: 'Poppins';
@@ -234,7 +233,7 @@ footer.row {
 
     font-family: "Poppins", serif;
 
-    text-transform: capitalize;
+    
 
     font-weight: 600;
 
@@ -270,7 +269,7 @@ footer.row {
 
     font-family: "Poppins", sans-serif;
 
-    text-transform: capitalize;
+    
 
     font-weight: 500;
 
@@ -708,6 +707,7 @@ header,
 .header_top .contact_info .c_info.service_time:before {
     font-family: FontAwesome;
     content: "\f10b";
+    font-size: 40px !important;
 }
 
 
@@ -736,7 +736,7 @@ header,
 
 .header_top .contact_info .c_info a:focus {
 
-    color: #fff;
+    color: black;
 
 }
 
@@ -1742,7 +1742,7 @@ header,
 
 .navbar #main_nav .navbar-nav.navbar-right li a+ul.cart-box .cart-header h4 {
 
-    text-transform: capitalize;
+    
 
     color: #391F0A;
 
@@ -1900,7 +1900,7 @@ header,
 
     color: #000;
 
-    text-transform: capitalize;
+    
 
     font-weight: 700;
 
@@ -4915,7 +4915,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
     font: 13px/1 "Open Sans", sans-serif;
 
-    text-transform: capitalize;
+    
 
     color: #e1ba60;
 
@@ -5274,7 +5274,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
     margin-top: -0px!important;
 
 }
-
+.google {
+    padding-right: 14%;
+}
 .btn-group.wpcf7-form-control select{
 
     color:#8d8d8d;
@@ -5287,7 +5289,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 }
 
-.testimonials-area input[type="submit"]{
+.testimonials-area input[type="button"]{
 
     background: #57C7E4;
 
@@ -5476,6 +5478,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 }
 
+@media (max-width: 992px) {
+    .google {
+        padding-right: 0;
+    }
+}
+@media (max-width: 400px) {
+     .apple img {
+        width: 49%;
+    }
+    .google img {
+        width: 49%;
+    }
+    .we_do .tab .tab-content .tab-pane .media .media-left a {
+        width: 226px !important;
+    }
+}
 @media (max-width: 728px) {
 
 .comming-soon input[type=submit]{
@@ -5708,7 +5726,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
     font-size: 16px;
 
-    text-transform: capitalize;
+    
 
     padding: 10px 34px;
 
@@ -7551,7 +7569,7 @@ footer.row .footer_sidebar .widget.about_us_widget .social_icon ul li a, footer.
 
 footer.row .footer_sidebar .widget.widget_contact ul li .fleft{
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -8592,7 +8610,7 @@ body.page-template-home > div.row.m0{
 
     color: #202020;
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -8776,7 +8794,7 @@ footer.row .footer_sidebar .widget .widget_title {
 
     margin: 0;
 
-    text-transform: capitalize;
+    
 
 }
 .up {
@@ -8849,7 +8867,7 @@ footer.row .footer_sidebar .widget.widget_links ul li a {
 
 
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -10207,7 +10225,7 @@ footer.row .footer_bottom .right {
 
 
 
-    text-transform: capitalize;
+    
 
     margin: 0;
 
@@ -11751,7 +11769,7 @@ footer.row .footer_bottom .right {
 
     color: #242424;
 
-    text-transform: capitalize;
+    
 
     padding-top: 5px;
 
@@ -11853,7 +11871,7 @@ footer.row .footer_bottom .right {
 
     font-family: 'Poppins';
 
-    text-transform: capitalize;
+    
 
     font-size: 15px;
 
@@ -13869,7 +13887,7 @@ footer.row .footer_bottom .right {
 
     line-height: 1;
 
-    text-transform: capitalize;
+    
 
     -webkit-transition: all 300ms linear 0s;
 
@@ -14179,7 +14197,7 @@ footer.row .footer_bottom .right {
 
     width: 70px;
 
-    text-transform: capitalize;
+    
 
     text-align: center;
 
@@ -14223,7 +14241,7 @@ footer.row .footer_bottom .right {
 
 .blog_content .blog_section .blog_section_inner .blog .post-meta .media-body .post-title {
 
-    text-transform: capitalize;
+    
 
     font: 600 20px/1 "Poppins", sans-serif;
 
@@ -15149,7 +15167,7 @@ footer.row .footer_bottom .right {
 
     font: 600 20px/1 "Poppins", serif;
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -15547,7 +15565,7 @@ footer.row .footer_bottom .right {
 
     margin-left: 5px;
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -15813,7 +15831,7 @@ footer.row .footer_bottom .right {
 
     font: 13px/1 "Open Sans", sans-serif;
 
-    text-transform: capitalize;
+    
 
     color: #e1ba60;
 
@@ -16801,7 +16819,7 @@ footer.row .footer_bottom .right {
 
     margin: 0 0 20px;
 
-    text-transform: capitalize;
+    
 
     font-weight: 600;
 
@@ -17337,7 +17355,7 @@ footer.row .footer_bottom .right {
 
 }
 .our-services a.banner-btn.style-two {
-    margin-left: 30px;
+    
     display: inline-block;
     vertical-align: middle;
     background: #57c7e4;
@@ -17974,7 +17992,7 @@ footer.row .footer_bottom .right {
 
     font: 600 34px/1 "Poppins", serif;
 
-    text-transform: capitalize;
+    
 
     margin: 0 0 5px;
 
@@ -19702,7 +19720,7 @@ footer.row .footer_bottom .right {
 
     font: 15px/21px "Open Sans", sans-serif;
 
-    text-transform: capitalize;
+    
 
     color: #898989;
 
@@ -19760,7 +19778,7 @@ footer.row .footer_bottom .right {
 
     margin: 0 0 15px;
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -19796,7 +19814,7 @@ footer.row .footer_bottom .right {
 
     float: left;
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -21202,7 +21220,7 @@ footer.row .footer_bottom .right {
 
     list-style: 28px;
 
-    text-transform: capitalize;
+    
 
 
 
@@ -21438,7 +21456,7 @@ footer.row .footer_bottom .right {
 
     font: 600 20px/35px "Poppins", sans-serif;
 
-    text-transform: capitalize;
+    
 
     color: #242424;
 
@@ -21664,7 +21682,7 @@ footer.row .footer_bottom .right {
 
     .maintenance .maintenance_left .features_inner {
 
-        margin: 0 auto;
+        margin: 19px auto;
         padding-top: 3%;
 
     }
@@ -21741,21 +21759,44 @@ footer.row .footer_bottom .right {
 
 
 
-.maintenance .maintenance_left .features_inner .feature .media-body h4 {
+.maintenance .maintenance_left .features_inner .feature .media-body h4,
+
+.maintenance .maintenance_left .features_inner .feature .media-body h3
+{
 
     font: 600 20px/28px "Poppins", sans-serif;
 
     color: #fff;
 
-    text-transform: capitalize;
+    
 
+}
+
+@media (max-width: 450px) {
+    #logo {
+        width: 100% !important;
+    }
+    #app-buttons {
+        margin-bottom:4%;
+    }
+    .maintenance .title h2:after {
+        margin-top: 6%;
+    }
+    .section_header h2:after {
+
+    margin-top: 6%;}
+    .static-banner-home-two .banner-content{
+        padding-top: 0;
+    }
 }
 
 
 
 @media (max-width: 1440px) {
 
-    .maintenance .maintenance_left .features_inner .feature .media-body h4 {
+    .maintenance .maintenance_left .features_inner .feature .media-body h4,
+    
+.maintenance .maintenance_left .features_inner .feature .media-body h3 {
 
         margin-bottom: 0;
 
@@ -21793,13 +21834,17 @@ footer.row .footer_bottom .right {
 
         line-height: 20px;
 
-        font-size: 13px;
+        font-size: 16px;
 
     }
 
 }
 
-
+@media (max-width: 450px) {
+    .maintenance .maintenance_left .features_inner .feature .media-body p {
+        font-size: 15px;
+    }
+}
 
 .maintenance .maintenance_right {
 
@@ -22654,7 +22699,7 @@ footer.row .footer_bottom .right {
 
 .navbar #main_nav .navbar-nav.navbar-right li a+ul.cart-box .cart-header h4 {
 
-    text-transform: capitalize;
+   
 
     color: #391F0A;
 
@@ -22848,7 +22893,6 @@ footer.row .footer_bottom .right {
 
     color: #000;
 
-    text-transform: capitalize;
 
     font-weight: 700;
 
@@ -23208,7 +23252,6 @@ footer.row .footer_bottom .right {
 
     background: #282D3E;
 
-    text-transform: capitalize;
 
     border: none;
 
@@ -23886,7 +23929,7 @@ footer.row .footer_bottom .right {
 
     font-family: 'Poppins', sans-serif;
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -23918,7 +23961,7 @@ footer.row .footer_bottom .right {
 
     color: #000000;
 
-    text-transform: capitalize;
+    
 
     font-family: 'Poppins';
 
@@ -24498,7 +24541,7 @@ footer.row .footer_bottom .right {
 
     color: #898989;
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -24594,7 +24637,7 @@ footer.row .footer_bottom .right {
 
     color: #242424;
 
-    text-transform: capitalize;
+    
 
     font-weight: 600;
 
@@ -24844,7 +24887,7 @@ footer.row .footer_bottom .right {
 
     font-size: 16px;
 
-    text-transform: capitalize;
+    
 
     padding: 10px 34px;
 
@@ -26880,7 +26923,7 @@ footer.row .footer_bottom .right {
 
     font-size: 16px;
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -26978,7 +27021,7 @@ footer.row .footer_bottom {font-weight: 600;}
 
     font-weight: 600;
 
-    text-transform: capitalize;
+    
 
 }
 
@@ -26994,7 +27037,7 @@ footer.row .footer_bottom {font-weight: 600;}
 
     font-family: 'Poppins';
 
-    text-transform: capitalize;
+    
 
 }
 
